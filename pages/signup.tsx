@@ -6,7 +6,7 @@ export default function Signup() {
     const [password, setPassword] = useState("");
     const router = useRouter();
 
-    const handleSignup = async (e) => {
+    const handleSignup = async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const res = await fetch("/api/signup", {
             method: "POST",
